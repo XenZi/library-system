@@ -3,6 +3,7 @@ package model;
 import java.time.LocalDate;
 
 import enums.Gender;
+import model.abstracts.User;
 
 public class Member extends User{
 	private int cardNumber;

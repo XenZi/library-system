@@ -1,15 +1,17 @@
 package main;
 
 import model.*;
+import model.admin.Admin;
 import enums.*;
 import managers.*;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Admin admin = AdminManager.getInstance();
-		System.out.println(admin);
+//		System.out.println(FileManager.readFile(AdminManager.FILEPATH));
+		AdminManager adminManager = AdminManager.getInstance();
+		adminManager.loadAdminsFromFile();
+		System.out.println(adminManager.getAllAdmins());
 	}
 
 }

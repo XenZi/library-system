@@ -1,8 +1,8 @@
 package interfaces;
 
 import enums.Gender;
-import model.Admin;
-import model.Librarian;
+import model.admin.Admin;
+import model.librarian.Librarian;
 
 public interface AdminPermissions {
 	/*

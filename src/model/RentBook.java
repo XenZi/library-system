@@ -3,6 +3,8 @@ package model;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import model.abstracts.Staff;
+
 
 public class RentBook {
 	private Staff staff;

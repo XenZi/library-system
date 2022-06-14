@@ -1,6 +1,7 @@
-package model;
+package model.librarian;
 
 import enums.Gender;
+import model.abstracts.Staff;
 
 public class Librarian extends Staff {
 	public Librarian() {

@@ -1,6 +1,7 @@
-package model;
+package model.admin;
 
 import enums.Gender;
+import model.abstracts.Staff;
 
 public class Admin extends Staff {
 	public Admin() {

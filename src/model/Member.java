@@ -86,6 +86,13 @@ public class Member extends User{
 	public void setMembershipDueDate(LocalDate membershipDueDate) {
 		this.membershipDueDate = membershipDueDate;
 	}
+
+	@Override
+	public String toString() {
+		return "Member [cardNumber=" + cardNumber + ", lastMembershipExtension=" + lastMembershipExtension
+				+ ", membershipDuration=" + membershipDuration + ", isActive=" + isActive + ", membership=" + membership
+				+ ", membershipDueDate=" + membershipDueDate + "]";
+	}
 	
 	
 }

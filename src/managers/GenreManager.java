@@ -13,6 +13,7 @@ public class GenreManager {
 	
 	private ArrayList<Genre> allGenres = new ArrayList<Genre>();
 	
+	private GenreManager() {};
 	public static GenreManager getInstance() {
 		if(instance == null) {
 			instance = new GenreManager();
@@ -20,16 +21,16 @@ public class GenreManager {
 		return instance;
 	}
 	
-	public void loadAdminsFromFile() {
+	public void loadGenresFromFile() {
 		String readedFile = FileManager.readFile(FILEPATH);
 		String[] splittedFile = readedFile.split("\n");
 		for(String line : splittedFile) {
-			Genre genre = createGenreObject(line);
+			Genre genre = createGenreFromFile(line);
 			if (genre != null) allGenres.add(genre);
 		}
 	}
 	
-	private Genre createGenreObject(String line) {
+	private Genre createGenreFromFile(String line) {
 		Genre readGenre = new Genre();
 		String[] splittedLine = line.split("\\|");
 		readGenre.setId(splittedLine[0]);
@@ -37,5 +38,12 @@ public class GenreManager {
 		readGenre.setDescription(splittedLine[2]);
 		readGenre.setDeleted(Boolean.parseBoolean(splittedLine[3]));
 		return readGenre;
+	}
+	
+	public Genre findGenre(String ID) {
+		return allGenres.stream()
+						.filter(genre -> genre.getId().equals(ID))
+						.findAny()
+						.orElse(null);
 	}
 }

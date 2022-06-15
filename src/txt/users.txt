@@ -1,1 +1,3 @@
-A-165720|Test|Test2|56789|MALE|rixenzii|123123|333|false|1
+A-165720|Test|Test2|56789|MALE|rixenzii|123123|333|false
+L-073477|test|test|test|MALE|testtt|123123|2222.0|false
+M-346886|Janko|Rakonjac|00922213|MALE|2123123|2022-02-02|5|true|1|true

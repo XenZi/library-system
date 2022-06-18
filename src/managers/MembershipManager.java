@@ -2,7 +2,6 @@ package managers;
 
 import java.util.ArrayList;
 
-import model.BookCopy;
 import model.MembershipFee;
 
 public class MembershipManager {
@@ -46,4 +45,30 @@ public static final String FILEPATH = "src/txt/membership.txt";
 						.findAny()
 						.orElse(null);
 	}
+
+	
+	/*
+	 * 
+	 * GETTERS AND SETTERS
+	 * 
+	 */
+	
+	
+	public ArrayList<MembershipFee> getAllMemberships() {
+		return allMemberships;
+	}
+
+	public void setAllMemberships(ArrayList<MembershipFee> allMemberships) {
+		this.allMemberships = allMemberships;
+	}
+
+	public static String getFilepath() {
+		return FILEPATH;
+	}
+
+	public static void setInstance(MembershipManager instance) {
+		MembershipManager.instance = instance;
+	}
+	
+	
 }

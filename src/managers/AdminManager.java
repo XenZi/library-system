@@ -3,6 +3,7 @@ package managers;
 import java.util.ArrayList;
 
 import enums.Gender;
+import model.RentBook;
 import model.admin.Admin;
 
 public class AdminManager {
@@ -53,6 +54,7 @@ public class AdminManager {
 		readAdmin.setDeleted(Boolean.valueOf(splittedLine[8]));
 		return readAdmin;
 	}
+
 
 	/*
 	 * 

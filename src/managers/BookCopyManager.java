@@ -43,7 +43,6 @@ public class BookCopyManager {
 		bookCopy.setPrintingYear(Integer.parseInt(splittedLine[5]));
 		bookCopy.setRented(Boolean.parseBoolean(splittedLine[6]));
 		bookCopy.setDeleted(Boolean.parseBoolean(splittedLine[7]));
-		if (bookCopy.isDeleted()) return null;
 		return bookCopy;
 	}
 	
@@ -53,4 +52,28 @@ public class BookCopyManager {
 						.findAny()
 						.orElse(null);
 	}
+
+	/*
+	 * 
+	 * GETTERS AND SETTERS
+	 * 
+	 */
+	
+	public ArrayList<BookCopy> getAllCopyBooks() {
+		return allCopyBooks;
+	}
+
+	public void setAllCopyBooks(ArrayList<BookCopy> allCopyBooks) {
+		this.allCopyBooks = allCopyBooks;
+	}
+
+	public static String getFilepath() {
+		return FILEPATH;
+	}
+
+	public static void setInstance(BookCopyManager instance) {
+		BookCopyManager.instance = instance;
+	}
+	
+	
 }

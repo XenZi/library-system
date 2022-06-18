@@ -46,4 +46,26 @@ public class GenreManager {
 						.findAny()
 						.orElse(null);
 	}
+	
+	/*
+	 * 
+	 * GETTERS AND SETTERS
+	 * 
+	 */
+	
+	
+	public ArrayList<Genre> getAllGenres() {
+		return allGenres;
+	}
+	public void setAllGenres(ArrayList<Genre> allGenres) {
+		this.allGenres = allGenres;
+	}
+	public static String getFilepath() {
+		return FILEPATH;
+	}
+	public static void setInstance(GenreManager instance) {
+		GenreManager.instance = instance;
+	}
+	
+	
 }

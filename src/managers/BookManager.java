@@ -56,4 +56,30 @@ public class BookManager {
 						.findAny()
 						.orElse(null);
 	}
+
+	/*
+	 * 
+	 * GETTERS AND SETTERS
+	 * 
+	 */
+	
+	
+	public ArrayList<Book> getAllBooks() {
+		return allBooks;
+	}
+
+	public void setAllBooks(ArrayList<Book> allBooks) {
+		this.allBooks = allBooks;
+	}
+
+	public static String getFilepath() {
+		return FILEPATH;
+	}
+
+	public static void setInstance(BookManager instance) {
+		BookManager.instance = instance;
+	}
+	
+	
+	
 }

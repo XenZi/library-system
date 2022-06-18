@@ -3,6 +3,7 @@ package managers;
 import java.util.ArrayList;
 
 import enums.Gender;
+import model.Book;
 import model.Genre;
 import model.Library;
 import model.librarian.Librarian;
@@ -50,4 +51,35 @@ public class LibrarianManager {
 		readLibrerian.setDeleted(Boolean.valueOf(splittedLine[8]));
 		return readLibrerian;
 	}
+	
+	public Librarian findLibrarian(String ID) {
+		return allLibrarians.stream()
+						.filter(librarian -> librarian.getId().equals(ID))
+						.findAny()
+						.orElse(null);
+	}
+	/*
+	 * 
+	 * GETTERS AND SETTERS
+	 * 
+	 */
+	
+	public ArrayList<Librarian> getAllLibrarians() {
+		return allLibrarians;
+	}
+
+	public void setAllLibrarians(ArrayList<Librarian> allLibrarians) {
+		this.allLibrarians = allLibrarians;
+	}
+
+	public static String getFilepath() {
+		return FILEPATH;
+	}
+
+	public static void setInstance(LibrarianManager instance) {
+		LibrarianManager.instance = instance;
+	}
+	
+	
+	
 }

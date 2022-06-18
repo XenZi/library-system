@@ -1,0 +1,10 @@
+204966|Thriller|Thriller|false
+127205|Mystery|Mystery|false
+503726|Horror|Horror|false
+616325|Popular Psychology|Popular Psychology|false
+025854|Classic|Classic|false
+415405|History|History|false
+439135|Science|Science|false
+722859|Serbian History|Serbian History|true
+886770|Novi|Test|true
+946379|TEst|Test|true

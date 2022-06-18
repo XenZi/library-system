@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 import enums.Gender;
+import model.BookCopy;
 import model.Member;
 import model.MembershipFee;
 
@@ -60,7 +61,21 @@ public static final String FILEPATH = "src/txt/users.txt";
 		}
 		return readMember;
 	}
+	
+	public Member findMember(String ID) {
+		return allMembers.stream()
+						.filter(member -> member.getId().equals(ID))
+						.findAny()
+						.orElse(null);
+	}
 
+	/*
+	 * 
+	 * GETTERS AND SETTERS
+	 * 
+	 */
+	
+	
 	public ArrayList<Member> getAllMembers() {
 		return allMembers;
 	}

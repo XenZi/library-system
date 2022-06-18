@@ -57,6 +57,12 @@ public class MembershipFee {
 	public void setId(String id) {
 		this.id = id;
 	}
+
+	@Override
+	public String toString() {
+		return "MembershipFee [type=" + type + ", price=" + price + ", isDeleted=" + isDeleted + ", id=" + id + "]";
+	}
+	
 	
 	
 }

@@ -2,6 +2,8 @@ package managers;
 
 import java.util.ArrayList;
 
+import model.Library;
+import model.RentBook;
 import model.abstracts.Staff;
 
 
@@ -12,6 +14,8 @@ public class LibraryManager {
 	
 	
 	private Staff loggedStaff;
+	private Library library;
+
 	private GenreManager genreManager;
 	private AdminManager adminManager;
 	private BookCopyManager bookCopyManager;
@@ -20,6 +24,7 @@ public class LibraryManager {
 	private MemberManager memberManager;
 	private MembershipManager membershipManager;
 	private RentalManager rentalManager;
+	private StaffManager staffManager;
 	
 	private LibraryManager() {
 		
@@ -31,7 +36,21 @@ public class LibraryManager {
 		}
 		return instance;
 	}
+	
+	public void loadLibraryFromFile() {
+		library = new Library();
+		String readedFile = FileManager.readFile(FILEPATH);
+		String[] splittedFile = readedFile.split("\n");
+		String line = FileManager.readFile(FILEPATH);
+		String[] splittedLine = line.split("\\|");
+		library.setID(splittedLine[0]);
+		library.setTitle(splittedLine[1]);
+		library.setAddress(splittedLine[2]);
+		library.setPhoneNumber(splittedLine[3]);
+		library.setWorkingTime(splittedLine[4]);
+	}
 
+	
 	/*
 	 * 
 	 * GETTERS AND SETTERS
@@ -118,5 +137,22 @@ public class LibraryManager {
 	public static String getFilepath() {
 		return FILEPATH;
 	}
-		
+
+	public Library getLibrary() {
+		return library;
+	}
+
+	public void setLibrary(Library library) {
+		this.library = library;
+	}
+
+	public StaffManager getStaffManager() {
+		return staffManager;
+	}
+
+	public void setStaffManager(StaffManager staffManager) {
+		this.staffManager = staffManager;
+	}
+	
+	
 }

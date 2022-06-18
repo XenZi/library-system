@@ -51,4 +51,11 @@ public class Genre {
 	public void setDeleted(boolean isDeleted) {
 		this.isDeleted = isDeleted;
 	}
+
+	@Override
+	public String toString() {
+		return "Genre [name=" + name + ", description=" + description + ", id=" + id + ", isDeleted=" + isDeleted + "]";
+	}
+	
+	
 }

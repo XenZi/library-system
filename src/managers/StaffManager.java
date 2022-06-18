@@ -2,7 +2,10 @@ package managers;
 
 import java.util.ArrayList;
 
+import model.RentBook;
 import model.abstracts.Staff;
+import model.admin.Admin;
+import model.librarian.Librarian;
 
 public class StaffManager {
 	private static StaffManager instance;
@@ -18,6 +21,18 @@ public class StaffManager {
 		return instance;
 	}
 
+	
+	public void fillWithStaff(ArrayList<Admin> adminList, ArrayList<Librarian> librarianList) {
+		adminList.forEach(el -> allStaff.add(el));
+		librarianList.forEach(el -> allStaff.add(el));
+	}
+	
+	public Staff findStaff(String ID) {
+		return allStaff.stream()
+						.filter(staff -> staff.getId().equals(ID))
+						.findAny()
+						.orElse(null);
+	}
 	
 	/*
 	 * 

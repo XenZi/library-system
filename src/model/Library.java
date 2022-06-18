@@ -62,6 +62,14 @@ public class Library {
 	public void setID(String iD) {
 		ID = iD;
 	}
+
+	@Override
+	public String toString() {
+		return "Library [title=" + title + ", address=" + address + ", phoneNumber=" + phoneNumber + ", workingTime="
+				+ workingTime + ", ID=" + ID + "]";
+	}
+	
+	
 	
 	
 }

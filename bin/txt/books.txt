@@ -1,0 +1,12 @@
+662894|Saptac|The Whisperer|Donato Carrisi|2019-10-10|Ne pomaže ti da znaš kako. Ne vredi ti da shvatiš zašto. Nije ti dovoljno da otkriješ ko. On je već korak ispred.|ENG|204966|false
+335569|Decak od stakla|Boy of glass|Donato Carrisi|2019-10-10|Ne postoje tragovi, već znaci. Nema zločina, samo anomalija. A svaka smrt samo je početak.|SRB|204966|false
+325887|Clean Code|Clean Code|Uncle Bob|2020-11-25|It is all about clean code fella'|ENG|439135|false
+726064|You don't know JS|You don't know JS|Kyle Simpson|2021-03-11|It is all about clean code fella'|ENG|439135|false
+864955|Ostrvo pelikana|Ostrvo pelikana|Miodrag Majic|2020-03-11|Ostrvo pelikana'|SRB|204966|false
+935806|Novi Naslov|Novi originalni naslov|Novi Pisac|1990-12-31|Novi Opis|SRB|503726|false
+323769|Saka|Magij|Saka|2022-05-05|Testtt|SRB|204966|false
+586609|Test1|test1|test1|2022-10-11|testttt|SRB|204966|false
+619066|Sakaaaa|Saka Magic Book|Saska Stojiljkovic|2022-08-08|This book is mystery|ENG|503726|false
+835462|Minor|Change|Test|2022-05-31|TestTestt|ENG|616325|false
+655928|Nova|Knjiga|Test|2022-02-02|Test|ENG|127205|false
+378080|Test|Test|Test|2022-05-05|Test|SRB|204966|false

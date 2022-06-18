@@ -35,7 +35,7 @@ public class RentalManager {
 		RentBook rental = new RentBook();
 		String[] splittedLine = line.split("\\|");
 		rental.setId(splittedLine[0]);
-		rental.setStaff(LibraryManager.getInstance().getLoggedStaff());
+		rental.setStaff(StaffManager.getInstance().findStaff(splittedLine[1]));
 		rental.setMember(MemberManager.getInstance().findMember(splittedLine[2]));
 		String[] splittedCopyBooksIDs = splittedLine[3].split(",");
 		for(String ll: splittedCopyBooksIDs) {
@@ -55,7 +55,13 @@ public class RentalManager {
 						.orElse(null);
 	}
 	
-
+	public static String rentedBooksToFileFormat(ArrayList<BookCopy> books) {
+		String output = "";
+		for(BookCopy book: books) {
+			output += book.getId() + ",";
+		}
+		return output;
+	}
 	/*
 	 * 
 	 * GETTERS AND SETTERS

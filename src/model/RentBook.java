@@ -82,6 +82,11 @@ public class RentBook {
 	public void setDeleted(boolean isDeleted) {
 		this.isDeleted = isDeleted;
 	}
+	@Override
+	public String toString() {
+		return "RentBook [staff=" + staff + ", member=" + member + ", rentalDate=" + rentalDate + ", returningDate="
+				+ returningDate + ", rentedBooks=" + rentedBooks + ", id=" + id + ", isDeleted=" + isDeleted + "]";
+	}
 	
 	
 }
